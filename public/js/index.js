@@ -15,11 +15,6 @@ const tempDegree = document.getElementById("temp-degree");
 // Hide temperature degree
 tempDegree.style.visibility = "hidden";
 
-// Function to display app title
-const showAppTitle = () => {
-    title.textContent = "Please enter a city name";
-}
-
 // function to display date
 const displayDate = () => {
     const now = new Date().toString().slice(0, 15);
