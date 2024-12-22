@@ -583,6 +583,18 @@ video {
   height: 85vh;
 }
 
+.h-full {
+  height: 100%;
+}
+
+.h-\[\] {
+  height: ;
+}
+
+.h-\[100vh\] {
+  height: 100vh;
+}
+
 .w-\[1\.2rem\] {
   width: 1.2rem;
 }
@@ -595,40 +607,12 @@ video {
   width: 85%;
 }
 
-.w-\[\] {
-  width: ;
-}
-
-.w-\[70\%\] {
-  width: 70%;
-}
-
-.w-\[80\%\] {
-  width: 80%;
+.max-w-\[17rem\] {
+  max-width: 17rem;
 }
 
 .max-w-\[27rem\] {
   max-width: 27rem;
-}
-
-.max-w-\[200\] {
-  max-width: 200;
-}
-
-.max-w-\[20\] {
-  max-width: 20;
-}
-
-.max-w-\[2\] {
-  max-width: 2;
-}
-
-.max-w-\[\] {
-  max-width: ;
-}
-
-.max-w-\[17rem\] {
-  max-width: 17rem;
 }
 
 .flex-col {
