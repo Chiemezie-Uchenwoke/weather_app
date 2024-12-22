@@ -1,7 +1,5 @@
-import { apiKey } from "./config.js";
-
+const apiKey = "169274ec6cfbfc5a09b58ff1c601d412";
 const userInputCity = document.getElementById("city");
-
 const title = document.getElementById("title");
 const locationIcon = document.getElementById("location-icon");
 const userCity = document.getElementById("showcity");
