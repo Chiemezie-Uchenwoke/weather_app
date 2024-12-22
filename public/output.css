@@ -571,8 +571,8 @@ video {
   display: flex;
 }
 
-.h-\[100vh\] {
-  height: 100vh;
+.h-\[100\%\] {
+  height: 100%;
 }
 
 .h-\[2\.5rem\] {
@@ -583,12 +583,16 @@ video {
   height: 85vh;
 }
 
-.h-\[10010\] {
-  height: 10010;
+.h-\[\] {
+  height: ;
 }
 
-.h-\[100\%\] {
-  height: 100%;
+.h-\[90vh\] {
+  height: 90vh;
+}
+
+.h-\[95vh\] {
+  height: 95vh;
 }
 
 .w-\[1\.2rem\] {
