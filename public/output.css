@@ -768,14 +768,6 @@ video {
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:h-\[65\%\] {
-    height: 65%;
-  }
-
-  .\32xl\:h-\[65vh\] {
-    height: 65vh;
-  }
-
   .\32xl\:h-\[60vh\] {
     height: 60vh;
   }
