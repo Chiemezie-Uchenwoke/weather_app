@@ -80,6 +80,9 @@ const fetchWeather = () => {
                 if(temp < 0){
                     weatherImage.setAttribute("src", weatherImages[6]);
                 }
+                else if(temp >= 25 && temp <=26){
+                    weatherImage.setAttribute("src", weatherImages[1]);
+                }
                 else if(temp >= 27){
                     weatherImage.setAttribute("src", weatherImages[4]);
                 }
