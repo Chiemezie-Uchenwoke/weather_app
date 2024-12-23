@@ -118,7 +118,7 @@ const fetchWeather = () => {
             }
 
             else {
-                weatherImage.setAttribute("src", weatherImages[1]);
+                weatherImage.setAttribute("src", weatherImages[0]);
             }
 
         })
