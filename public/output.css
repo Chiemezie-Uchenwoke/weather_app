@@ -778,6 +778,24 @@ video {
   background-image: linear-gradient(45deg, #133E87, #CBDCEB);
 }
 
+.placeholder\:text-center::-moz-placeholder {
+  text-align: center;
+}
+
+.placeholder\:text-center::placeholder {
+  text-align: center;
+}
+
+.placeholder\:text-color-txt::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(55 55 55 / var(--tw-text-opacity, 1));
+}
+
+.placeholder\:text-color-txt::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(55 55 55 / var(--tw-text-opacity, 1));
+}
+
 @media (min-width: 768px) {
   .md\:w-\[8\.3rem\] {
     width: 8.3rem;

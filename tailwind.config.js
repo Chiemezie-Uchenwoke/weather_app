@@ -13,7 +13,8 @@ module.exports = {
         "sec-gold": "#ffca2a",
         "sec-gold-yellow": "#FFD700",
         "off-white": "#f6f6f6",
-        "sec-orange": "#FFAA33"
+        "sec-orange": "#FFAA33",
+        "color-txt": "#373737"
       }
     },
   },
