@@ -11,8 +11,9 @@ module.exports = {
         "sec-blue": "#608BC1",
         "acc-blue": "#CBDCEB",
         "sec-gold": "#ffca2a",
+        "sec-gold-yellow": "#FFD700",
         "off-white": "#f6f6f6",
-        "light-yellow": "#F3F3E0"
+        "sec-orange": "#FFAA33"
       }
     },
   },
