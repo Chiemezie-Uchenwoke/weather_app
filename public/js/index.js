@@ -74,7 +74,7 @@ const fetchWeather = () => {
             const isNightTime = currentHour >= 18 || currentHour < 6; //check for night time
             // console.log(isNightTime);
 
-            const weatherImages = ["./images/clouds.png", "./images/cloudy.png", "./images/heavy-rain.png", "./images/rainy-day.png", "./images/sun.png", "./images/cloudy-night.png", "./images/snow.png"];
+            const weatherImages = ["./images/clouds.png", "./images/cloudy.png", "./images/heavy-rain.png", "./images/rainy-day.png", "./images/sun.png", "./images/cloudy-night.png", "./images/snow.png", "./images/snowy.png"];
 
             if (tempDescription.includes("clouds")){
                 if(temp < 0){
@@ -105,6 +105,12 @@ const fetchWeather = () => {
                 else{
                     if(temp < 0){
                         weatherImage.setAttribute("src", weatherImages[6]);
+                    }
+                    else if (temp >=1 && temp <=15){
+                        weatherImage.setAttribute("src", weatherImages[7]);
+                    }
+                    else if (temp >=16 && temp <= 22){
+                        weatherImage.setAttribute("src", weatherImages[0]);
                     }
                     else{
                         weatherImage.setAttribute("src", weatherImages[4]);
