@@ -575,28 +575,12 @@ video {
   height: 2.5rem;
 }
 
-.h-\[83vh\] {
-  height: 83vh;
-}
-
 .h-\[80vh\] {
   height: 80vh;
 }
 
 .min-h-screen {
   min-height: 100vh;
-}
-
-.min-h-\[83vh\] {
-  min-height: 83vh;
-}
-
-.min-h-\[vh\] {
-  min-height: vh;
-}
-
-.min-h-\[60vh\] {
-  min-height: 60vh;
 }
 
 .w-\[1\.2rem\] {
@@ -786,5 +770,13 @@ video {
 @media (min-width: 1536px) {
   .\32xl\:h-\[65\%\] {
     height: 65%;
+  }
+
+  .\32xl\:h-\[65vh\] {
+    height: 65vh;
+  }
+
+  .\32xl\:h-\[60vh\] {
+    height: 60vh;
   }
 }
