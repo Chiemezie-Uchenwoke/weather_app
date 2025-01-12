@@ -1,0 +1,22 @@
+export default async function handler(req, res) {
+    const { city } = req.query;
+    const API_KEY = process.env.API_KEY;  // Set this in your Vercel Environment Variables
+  
+    // If city parameter is missing, return an error
+    if (!city) {
+      return res.status(400).json({ error: "City is required" });
+    }
+  
+    try {
+      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`);
+      if (!response.ok) {
+        return res.status(500).json({ error: "Error fetching weather data" });
+      }
+  
+      const data = await response.json();
+      res.status(200).json(data);
+    } catch (error) {
+      res.status(500).json({ error: "Network Error" });
+    }
+  }
+  
