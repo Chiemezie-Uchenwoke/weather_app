@@ -35,11 +35,12 @@ const fetchWeather = () => {
     const city = userInputCity.value.trim();
   
     if (!city) {
-      title.textContent = "Please enter a city name";
-  
-      setTimeout(() => {
-        title.textContent = "weather app";
-      }, 2000);
+        title.textContent = "Please enter a city name";
+
+        // Hide message after 2 seconds
+        setTimeout(() => {
+            title.textContent = "weather app";
+        }, 2000);
   
       return;
     }
@@ -52,22 +53,84 @@ const fetchWeather = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
   
-        // Process the data as before
+        // show temperature
         const temp = Math.floor(data.main.temp);
         temperature.innerHTML = temp;
         tempDegree.style.visibility = "visible";
   
+        // show description
         const tempDescription = data.weather[0].description;
         weatherDescription.textContent = tempDescription;
   
-        // Continue with the rest of the logic to update the UI...
-      })
+        // Show weather image
+        const currentHour = new Date().getHours();
+        const isNightTime = currentHour >= 18 || currentHour < 6; //check for night time
+        // console.log(isNightTime);
+
+        const weatherImages = ["./images/clouds.png", "./images/cloudy.png", "./images/heavy-rain.png", "./images/rainy-day.png", "./images/sun.png", "./images/cloudy-night.png", "./images/snow.png", "./images/snowy.png"];
+
+        if (tempDescription.includes("clouds")){
+            if(temp < 0){
+                weatherImage.setAttribute("src", weatherImages[6]);
+            }
+            else if(temp >= 25 && temp <=26){
+                weatherImage.setAttribute("src", weatherImages[1]);
+            }
+            else if(temp >= 27){
+                weatherImage.setAttribute("src", weatherImages[4]);
+            }
+            else{
+                weatherImage.setAttribute("src", weatherImages[0]);
+            } 
+        }
+        
+        else if (tempDescription.includes("clear sky")){
+            // clear sky: check for night time
+            if (isNightTime){
+                if(temp < 0){
+                    weatherImage.setAttribute("src", weatherImages[6]);
+                }
+                else{
+                    weatherImage.setAttribute("src", weatherImages[5]);
+                }
+            }
+            // clear sky: sunny - day time
+            else{
+                if(temp < 0){
+                    weatherImage.setAttribute("src", weatherImages[6]);
+                }
+                else if (temp >=1 && temp <=15){
+                    weatherImage.setAttribute("src", weatherImages[7]);
+                }
+                else if (temp >=16 && temp <= 22){
+                    weatherImage.setAttribute("src", weatherImages[0]);
+                }
+                else{
+                    weatherImage.setAttribute("src", weatherImages[4]);
+                } 
+            }
+        }
+
+        else if (tempDescription.includes("rain") || tempDescription.includes("drizzle")){
+            weatherImage.setAttribute("src", weatherImages[3]);
+        }
+
+        else if (tempDescription.includes("thunderstorm")){
+            weatherImage.setAttribute("src", weatherImages[2]);
+        }
+
+        else {
+            weatherImage.setAttribute("src", weatherImages[0]);
+        }
+
+    })
       .catch((error) => {
         console.log(error);
         title.textContent = "unable to fetch data";
   
+        // Hide message after 2 seconds
         setTimeout(() => {
           title.textContent = "weather app";
         }, 2000);
