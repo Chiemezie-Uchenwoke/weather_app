@@ -44,6 +44,23 @@ const fetchWeather = () => {
   
       return;
     }
+
+    /* 
+    Creating the API Route (Backend):
+        In your Next.js or Vercel Serverless Functions project, you define API routes in the 
+        pages/api directory. This directory is used to create serverless functions that your frontend can call.
+
+        For example, you create a file named weather.js inside the pages/api folder:
+        /pages/api/weather.js
+    
+    */
+
+    /* 
+        API route is automatically available under /api/weather in your application.
+
+            When a request is made to this route with a city as a query parameter (e.g., /api/weather?city=London), the handler function is executed, which fetches weather data from the OpenWeather API and sends it back as a response.
+
+    */
   
     fetch(`/api/weather?city=${city}`)
       .then((response) => {
