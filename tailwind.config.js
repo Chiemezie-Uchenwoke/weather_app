@@ -15,7 +15,10 @@ module.exports = {
         "off-white": "#f6f6f6",
         "sec-orange": "#FFAA33",
         "color-txt": "#373737"
-      }
+      },
+      backgroundImage: {
+        'weather-bg': "url('/images/weather-bg.jpg')", // Path relative to the `public` folder
+      },
     },
   },
   plugins: [],
