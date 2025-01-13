@@ -655,6 +655,11 @@ video {
   border-width: 2px;
 }
 
+.border-acc-blue {
+  --tw-border-opacity: 1;
+  border-color: rgb(203 220 235 / var(--tw-border-opacity, 1));
+}
+
 .bg-acc-blue {
   --tw-bg-opacity: 1;
   background-color: rgb(203 220 235 / var(--tw-bg-opacity, 1));
